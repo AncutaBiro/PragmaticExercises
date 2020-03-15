@@ -20,7 +20,7 @@ public class MadLib {
         System.out.println("Enter an adverb: ");
         String adverb = scanner.nextLine();
 
-        System.out.println("Do you "+verb +" your "+ adjective + " " +noun+ " " +adverb + "? " + "That's hilarious!");
+        System.out.println("Do you " + verb + " your " + adjective + " " + noun + " " + adverb + "? " + "That's hilarious!");
 
     }
 
