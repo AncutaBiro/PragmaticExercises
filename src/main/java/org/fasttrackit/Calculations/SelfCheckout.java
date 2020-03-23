@@ -26,26 +26,19 @@ public class SelfCheckout {
 
         double subTotal = price1*quantity1 + price2*quantity2 + price3*quantity3;
 
+        // cum se poate obtine doar simboulul $ , fara US$?
+
         Currency dollar = Currency.getInstance(Locale.US);
 
         System.out.println("Subtotal: " + dollar.getSymbol() + subTotal);
 
-//        double taxRate =
-        double tax = subTotal * 550/100;
+        double tax = 5.5 * subTotal / 100;
 
-        System.out.println(tax);
+        System.out.println("Tax: "+ dollar.getSymbol() + tax);
 
+        double total = subTotal + tax;
 
-
-
-
-
-
-
-
-
-
-
+        System.out.println("Total: "+ dollar.getSymbol() + total);
 
     }
 }
