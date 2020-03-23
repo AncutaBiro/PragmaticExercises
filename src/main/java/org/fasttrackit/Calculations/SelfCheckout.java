@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class SelfCheckout {
 
+    final static double TAX_RATE = 5.5;
+    final static int CONVERSION_PERCENTAGE = 100;
+
     public static void main(String[] args) {
 
         System.out.println("Enter the price of item 1: ");
@@ -32,7 +35,7 @@ public class SelfCheckout {
 
         System.out.println("Subtotal: " + dollar.getSymbol() + subTotal);
 
-        double tax = 5.5 * subTotal / 100;
+        double tax = TAX_RATE * subTotal / CONVERSION_PERCENTAGE;
 
         System.out.println("Tax: "+ dollar.getSymbol() + tax);
 
