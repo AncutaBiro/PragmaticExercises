@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class PizzaParty {
 
-    // inca nu e rezolvat complet exercitiu, te rog nu il corecta pe acesta inca :)
-
     public static void main(String[] args) {
 
         System.out.println("How many people? ");
