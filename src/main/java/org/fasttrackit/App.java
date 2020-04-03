@@ -27,25 +27,22 @@ public class App {
 //        LogicalOp6 ex6 = new LogicalOp6();
 //        ex6.op6 ();
 
-        LogicalOp7 ex7 = new LogicalOp7();
-        ex7.op7(95);
+//        LogicalOp7 ex7 = new LogicalOp7();
+//        ex7.op7(95);
+//
+//        LogicalOp8 ex8 = new LogicalOp8();
+//        ex8.op8(95);
 
-        LogicalOp8 ex8 = new LogicalOp8();
-        ex8.op8(95);
-
-
-
-
-
+        LogicalOp9 ex9 = new LogicalOp9();
+        ex9.op9();
 
 
-//        String test = "a b c d";
+
+        //        String test = "a b c d";
 //        String[] letters = test.split(" ");
 //
 //        for (int i = 0; i < letters.length; i++) {
 //            System.out.println(letters[i]);
-//        }
-
 
 
     }
