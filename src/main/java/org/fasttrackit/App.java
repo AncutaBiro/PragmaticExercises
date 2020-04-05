@@ -33,8 +33,8 @@ public class App {
 //        LogicalOp8 ex8 = new LogicalOp8();
 //        ex8.op8(95);
 
-        LogicalOp9 ex9 = new LogicalOp9();
-        ex9.op9();
+//        LogicalOp9 ex9 = new LogicalOp9();
+////        ex9.op9();
 
 
 
