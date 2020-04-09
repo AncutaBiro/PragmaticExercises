@@ -1,14 +1,15 @@
 package org.fasttrackit.MakingDecisions;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class LegalDrivingAge {
 
     public static void main(String[] args) {
 
-        System.out.println("What is your age? ");
-        Scanner scanner = new Scanner(System.in);
-        int age = scanner.nextInt();
+            System.out.println("What is your age? ");
+            Scanner scanner = new Scanner(System.in);
+            int age = scanner.nextInt();
 
             if (age >= 16) {
                 System.out.println("You are old enough to legally drive.");
