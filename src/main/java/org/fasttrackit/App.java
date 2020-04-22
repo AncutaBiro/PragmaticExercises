@@ -9,6 +9,9 @@ import org.fasttrackit.ForLoopExercises.*;
 public class App {
 
     public static void main(String[] args) {
+
+
+
 //        LogicalOp1 ex1 =  new LogicalOp1 ();
 //        ex1.op1(99);
 //
