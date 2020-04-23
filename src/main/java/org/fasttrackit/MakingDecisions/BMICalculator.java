@@ -56,10 +56,10 @@ public class BMICalculator {
 
             double bmi = (weight / (height * height)) * CONSTANT;
 
-            if (bmi < 18.5) {
+            if (bmi <= 18.5) {
                 System.out.println("Your BMI is " + bmi + ".");
                 System.out.println("You are underweight. You should see your doctor.");}
-               if (bmi > 25) {
+               if (bmi >= 25) {
                    System.out.println("Your BMI is " + bmi + ".");
                    System.out.println("You are overweight. You should see your doctor.");}
                     else {
