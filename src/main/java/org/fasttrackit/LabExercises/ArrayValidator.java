@@ -49,6 +49,18 @@ import java.util.Scanner;
 public class ArrayValidator {
 
     public static String validateArray (int [] numbers) {
+
+        for (int k=0; k < numbers.length; k++) {
+            for (int x= k+1; x < numbers.length; x++) {
+                if (numbers[k] < numbers[x]) {
+                for (int y = x+1; y < numbers.length; y++) {
+                    if (numbers[y] <= numbers[k]) {
+                        return "INVALID";
+                    }
+                  }
+                }
+            }
+        }
         return "VALID";
     }
 
@@ -79,11 +91,14 @@ public class ArrayValidator {
 
             String result = validateArray(numbers);
 
-            String resultLine = "CASE #" + i + ": " + result;
+            String resultLine = "CASE#" + i + ": " + result;
 
             bufferedWriter.write(resultLine);
+            bufferedWriter.newLine();
 
         }
 
+        scanner.close();
+        bufferedWriter.close();
     }
 }
