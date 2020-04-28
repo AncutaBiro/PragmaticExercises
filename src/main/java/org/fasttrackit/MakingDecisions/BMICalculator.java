@@ -7,52 +7,35 @@ public class BMICalculator {
 
     final static int CONSTANT = 703;
 
-    // am incercat o metoda care sa verifice daca inputul de la user este numeric,
-// problema este ca la apelarea metodei returneaza date de tip String si nu pot aplica formula are nevoie de variabile numerice.
-//    private static String getWeightFromUser (){
-//        System.out.println("Please enter the weight in pounds.");
-//        String weight = ScannerUtils.nextLine();
-//
-//        if (weight.matches("-?\\d+(\\.\\d+)?")) {
-//            System.out.println();
-//            } else {
-//                System.out.println("You have entered an invalid value. Please try again.");
-//                return getWeightFromUser();
-//            }
-//            return weight;
-//        }
+    private static double getWeightFromUser (){
+        System.out.println("Please enter the weight in pounds.");
+        String weight = ScannerUtils.nextLine();
 
-//    am incercat try catch cu recurvitate sa verific datele , dar nu functioneaza. Poti sa ma ajuti, te rog.
-//    private static double getWeightFromUser() {
-//        System.out.println("Please enter the weight in pounds.");
-//        double weight = ScannerUtils.nextDouble();
-//
-//        try {
-//            return weight;
-//        } catch (InputMismatchException e) {
-//            System.out.println("You have entered an invalid value. Please try again.");
-//            return getWeightFromUser();
-//        }
-//    }
-//
-//    private static double getHeightFromUser() {
-//        System.out.println("Please enter the height in inches.");
-//        double height = ScannerUtils.nextDouble();
-//
-//        try {
-//            return height;
-//        } catch (InputMismatchException e) {
-//            System.out.println("You have entered an invalid value. Please try again.");
-//            return getHeightFromUser();
-//        }
-//    }
+        if (weight.matches("-?\\d+(\\.\\d+)?")) {
+            System.out.println();
+            } else {
+                System.out.println("You have entered an invalid value. Please try again.");
+                return getWeightFromUser();
+            }
+            return Double.parseDouble(weight);
+        }
+
+    private static double getHeightFromUser() {
+        System.out.println("Please enter the height in inches.");
+
+        try {
+            return ScannerUtils.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("You have entered an invalid value. Please try again.");
+            return getHeightFromUser();
+        }
+    }
 
         public static void main(String[] args){
-            System.out.println("Please enter the weight in pounds.");
-            double weight = ScannerUtils.nextDouble();
 
-            System.out.println("Please enter the height in inches.");
-            double height = ScannerUtils.nextDouble();
+            double weight= getWeightFromUser();
+
+            double height = getHeightFromUser();
 
             double bmi = (weight / (height * height)) * CONSTANT;
 

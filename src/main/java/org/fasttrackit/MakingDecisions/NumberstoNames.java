@@ -4,16 +4,14 @@ import org.fasttrackit.utils.ScannerUtils;
 
 public class NumberstoNames {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+        numbersToNamesAndInputCheck ();
+    }
+
+    private static void numbersToNamesAndInputCheck() {
 
         System.out.println("Please enter the number of the month: ");
         int month = ScannerUtils.nextInt();
-
-//        intrebare: e posibil si daca da cum se poate "Use a single output statement for this program."
-//        e vorba de switch cu 12 case, cum sa ai o singura declaratie pt rezultat? te rog, clarifica. poate nu am inteles eu bine cerinta
-
-//      e posibil si cum sa fac un mesaj de eroare in cadrul instructiunii default cu recursivitate?
-//      adica sa ii dea posibilitatea userului sa incerce din nou fara sa iasa din program.
 
         switch(month) {
             case 1:
@@ -53,8 +51,8 @@ public class NumberstoNames {
                 System.out.println("The name of the month is December");
                 break;
             default:
-                System.out.println("Please enter a number from 1-12. Try again.");
+                System.out.println("You have entered an invalid value. Try again with a number between 1-12.");
+                numbersToNamesAndInputCheck();
         }
     }
-
 }

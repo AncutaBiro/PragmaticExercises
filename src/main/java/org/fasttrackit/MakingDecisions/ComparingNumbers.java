@@ -21,7 +21,7 @@ public class ComparingNumbers {
                 System.out.println("The largest number is " + firstNo);
             } else if (secondNo > firstNo && secondNo > thirdNo) {
                 System.out.println("The largest number is " + secondNo);
-            } else if (thirdNo > firstNo && thirdNo > secondNo) { // de ce apare mesajul?
+            } else {
                 System.out.println("The largest number is " + thirdNo);
             }
         }
