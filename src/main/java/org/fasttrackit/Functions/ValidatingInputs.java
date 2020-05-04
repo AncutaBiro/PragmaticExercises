@@ -7,21 +7,15 @@ public class ValidatingInputs {
 
     public static void main(String[] args) {
 
-//      cum sa oblig userul sa introduca date. de ex daca da Enter trece la urmatoarea comanda.
-//        am incercat aici cu while +  .isBlank, dar vreau ceva in interiorul metodei cand verific inputul.
-
-
         System.out.println("Enter the first name:");
-        while (checkName().isBlank()) {
-            System.out.println("The first name must be filled in.");
+//        while (checkName().isBlank()) {
+//            System.out.println("The first name must be filled in.");
             checkName();
-        }
 
         System.out.println("Enter the last name:");
-        while (checkName().isBlank()) {
-            System.out.println("The last name must be filled in.");
+//        while (checkName().isBlank()) {
+//            System.out.println("The last name must be filled in.");
             checkName();
-        }
 
         System.out.println("Enter the ZIP code: ");
         checkZip();
@@ -31,13 +25,18 @@ public class ValidatingInputs {
 
     }
 
-
     private static String checkName() {
         String name = ScannerUtils.nextLine();
         char[] arrayName = name.toCharArray();
 
         try {
             for (int i = 0; i < arrayName.length; i++) {
+//  nu functioneaza, poti sa dai Enter si trece mai departe. E corect codul?
+//  exista alta solutie?
+//  cu while asa cum l-am folosit, muta cursorul si trebuie sa dai Enter de 2 ori ca sa reia codul si atunci intra din nou in while.
+                if (name.length()==0) {
+                    throw new NullPointerException();
+                }
                 if (!name.matches("[a-zA-Z]+")) {
                     throw new InputMismatchException();
                 }
@@ -45,8 +44,11 @@ public class ValidatingInputs {
                     throw new IndexOutOfBoundsException();
                 }
             }
+        } catch (NullPointerException e) {
+            System.out.println("The name must be filled in.");
+            return checkName();
         } catch (InputMismatchException e) {
-            System.out.println("You have entered an invalid value. Please try again.");
+            System.out.println("The name must contain letters. You have entered an invalid value.");
             return checkName();
         } catch (IndexOutOfBoundsException e) {
             System.out.println(name + " is not a valid first name. It is too short.");
@@ -59,6 +61,7 @@ public class ValidatingInputs {
         String zip = ScannerUtils.nextLine();
 
         if (zip.matches("-?\\d+(\\.\\d+)?")) {
+            System.out.println();
         } else {
             System.out.println("The ZIP code must be numeric.");
             return checkZip();
