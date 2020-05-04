@@ -8,14 +8,10 @@ public class ValidatingInputs {
     public static void main(String[] args) {
 
         System.out.println("Enter the first name:");
-//        while (checkName().isBlank()) {
-//            System.out.println("The first name must be filled in.");
-            checkName();
+        checkName();
 
         System.out.println("Enter the last name:");
-//        while (checkName().isBlank()) {
-//            System.out.println("The last name must be filled in.");
-            checkName();
+        checkName();
 
         System.out.println("Enter the ZIP code: ");
         checkZip();
@@ -30,11 +26,9 @@ public class ValidatingInputs {
         char[] arrayName = name.toCharArray();
 
         try {
-            for (int i = 0; i < arrayName.length; i++) {
-//  nu functioneaza, poti sa dai Enter si trece mai departe. E corect codul?
-//  exista alta solutie?
-//  cu while asa cum l-am folosit, muta cursorul si trebuie sa dai Enter de 2 ori ca sa reia codul si atunci intra din nou in while.
-                if (name.length()==0) {
+            for (int i = 0; i <= arrayName.length; i++) {
+
+                if (name.isEmpty()) {
                     throw new NullPointerException();
                 }
                 if (!name.matches("[a-zA-Z]+")) {
