@@ -2,7 +2,6 @@ package org.fasttrackit.Repetition;
 
 import org.fasttrackit.utils.ScannerUtils;
 
-import javax.sound.midi.Soundbank;
 import java.util.InputMismatchException;
 
 public class KarvonenHeartRate {
