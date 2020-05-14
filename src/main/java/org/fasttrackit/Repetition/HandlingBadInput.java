@@ -23,15 +23,23 @@ public class HandlingBadInput {
         inputs.add(r);
 
         try {
-        for (String i : inputs) {
-            if (i.equals("0")) {
-                throw new ArithmeticException();
+            for (String i : inputs) {
+                if (i.equals("0")) {
+                    throw new ArithmeticException();
+                }
+                if (i.isEmpty()) {
+                    throw new NullPointerException();
+                }
+                if (i.matches("[a-zA-Z]+")) {
+                    throw new InputMismatchException();
+                }
             }
-            if (i.matches("[a-zA-Z]+")) {
-                throw new InputMismatchException();
-            }
-            }
-        } catch (ArithmeticException e) {
+        }
+        catch (NullPointerException e) {
+            System.out.println("You must enter a value.");
+            return inputValidator();
+        }
+        catch (ArithmeticException e) {
             System.out.println("The value \"0\" is not valid.");
             return inputValidator();
         } catch (InputMismatchException e) {
