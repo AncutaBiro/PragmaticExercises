@@ -1,7 +1,6 @@
 package org.fasttrackit.Repetition;
 
 import org.fasttrackit.utils.ScannerUtils;
-import java.util.InputMismatchException;
 import java.util.Random;
 
 public class GuesstheNumberGame {
@@ -11,7 +10,6 @@ public class GuesstheNumberGame {
     private static int random10 = randomNumber(10);
     private static int random100 = randomNumber(100);
     private static int random1000 = randomNumber(1000);
-
 
     private static int validateInput() {
         String input = ScannerUtils.nextLine();
@@ -76,11 +74,17 @@ public class GuesstheNumberGame {
         return guess;
     }
 
-        private static void playAgain () {
+        private static void choseLevel () {
 
-            System.out.println("Let's play Guess the Number.");
+            random10 = randomNumber(10);
+            random100 = randomNumber(100);
+            random1000 = randomNumber(1000);
+            invalidInput = 0;
+            wrongInput = 0;
 
-            System.out.print("\nPick a difficulty level (1, 2, or 3): ");
+            System.out.println("\nLet's play Guess the Number.");
+
+            System.out.print("Pick a difficulty level (1, 2, or 3): ");
             int level = ScannerUtils.nextInt();
 
             System.out.print("\nI have my number. What's your guess? ");
@@ -89,37 +93,38 @@ public class GuesstheNumberGame {
                 System.out.println("Cheat " + random10);
                 int guess1 = guessTheNumber10();
                 System.out.println("Right, " + guess1 + " is the correct number!");
-                System.out.println("You got it in " + (wrongInput + invalidInput) + " guesses!");
             }
 
             if (level == 2) {
                 System.out.println("Cheat " + random100);
                 int guess2 = guessTheNumber100();
                 System.out.println("Right, " + guess2 + " is the correct number!");
-                System.out.println("You got it in " + (wrongInput + invalidInput) + " guesses!");
             }
 
             if (level == 3) {
                 System.out.println("Cheat " + random1000);
                 int guess3 = guessTheNumber1000();
                 System.out.println("Right, " + guess3 + " is the correct number!");
-                System.out.println("You got it in " + (wrongInput + invalidInput) + " guesses!");
             }
+
+            System.out.println("You got it in " + (wrongInput + invalidInput) + " guesses!");
 
             System.out.println("\nPlay again: y or n");
             String response = ScannerUtils.nextLine();
 
             if (response.equals("y")) {
                 System.out.println("Great, best of luck!");
-                playAgain();
+                choseLevel();
             }
             if (response.equals("n")) {
-            System.out.println("Goodbye!");}
+                System.out.println("Goodbye!");
+            }
         }
 
     public static void main (String[] args) {
-        playAgain();
+        choseLevel();
     }
+
 }
 
 
