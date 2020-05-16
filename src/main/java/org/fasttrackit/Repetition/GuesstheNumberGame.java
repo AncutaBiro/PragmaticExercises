@@ -1,6 +1,8 @@
 package org.fasttrackit.Repetition;
 
 import org.fasttrackit.utils.ScannerUtils;
+
+import java.util.InputMismatchException;
 import java.util.Random;
 
 public class GuesstheNumberGame {
@@ -10,6 +12,10 @@ public class GuesstheNumberGame {
     private static int random10 = randomNumber(10);
     private static int random100 = randomNumber(100);
     private static int random1000 = randomNumber(1000);
+
+    public static void main (String[] args) {
+        choseLevel();
+    }
 
     private static int validateInput() {
         String input = ScannerUtils.nextLine();
@@ -107,22 +113,23 @@ public class GuesstheNumberGame {
                 System.out.println("Right, " + guess3 + " is the correct number!");
             }
 
+            if (level!=1 && level!=2 && level!=3) {
+            throw new InputMismatchException("You must enter 1,2 or 3. Try again!");
+            }
+
             System.out.println("You got it in " + (wrongInput + invalidInput) + " guesses!");
 
-            System.out.println("\nPlay again: y or n");
-            String response = ScannerUtils.nextLine();
+                    System.out.println("\nPlay again: y or n");
+                    String response = ScannerUtils.nextLine();
 
-            if (response.equals("y")) {
-                System.out.println("Great, best of luck!");
-                choseLevel();
-            }
-            if (response.equals("n")) {
-                System.out.println("Goodbye!");
-            }
-        }
+                    if (response.equals("y")) {
+                        System.out.println("Great, best of luck!");
+                        choseLevel();
+                    }
+                    if (response.equals("n")) {
+                        System.out.println("Goodbye!");
+                    }
 
-    public static void main (String[] args) {
-        choseLevel();
     }
 
 }
