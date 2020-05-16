@@ -95,6 +95,10 @@ public class GuesstheNumberGame {
 
             System.out.print("\nI have my number. What's your guess? ");
 
+//           am incercat cu switch case:1, case:2, case:3 si default throw exception, dar dupa ce am inchis acolada pt switch,
+//           orice comanda avea eroare unreachable.
+//           nu se poate cu switch sau am gresit undeva?
+
             if (level == 1) {
                 System.out.println("Cheat " + random10);
                 int guess1 = guessTheNumber10();
