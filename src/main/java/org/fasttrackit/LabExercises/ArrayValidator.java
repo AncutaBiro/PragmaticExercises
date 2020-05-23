@@ -66,11 +66,27 @@ public class ArrayValidator {
 
     public static void main(String[] args) throws IOException {
 
+// reading file with BufferedReader
+
 //        BufferedReader bufferedReader = new BufferedReader(
 //                new FileReader("C:\\Users\\Anca\\Desktop\\Java Curs\\Java15\\PragmaticExercises\\src\\main\\java\\org\\fasttrackit\\LabExercises\\exercise 6 - input.txt"));
 //
 //        String line = bufferedReader.readLine();
-//        to complete
+//
+//        int testCasesCount = Integer.parseInt(line);
+//
+//        int arrayLength = Integer.parseInt(bufferedReader.readLine());
+//
+//        String numbersLine = bufferedReader.readLine();
+//
+//        String [] numbersAsString = numbersLine.split(" ");
+//
+//        int [] numbers = new int[arrayLength];
+//
+//        for (int i=0; i< arrayLength; i++) {
+//            int number = Integer.parseInt(numbersAsString[i]);
+//            numbers[i] = number;
+//        }
 
         Scanner scanner =  new Scanner (Paths.get ("C:\\Users\\Anca\\Desktop\\Java Curs\\Java15\\PragmaticExercises\\src\\main\\java\\org\\fasttrackit\\LabExercises\\exercise 6 - input.txt"));
 
