@@ -17,7 +17,8 @@ public class EmployeeListRemoval {
         Scanner scanner = new Scanner
                 (Paths.get("C:\\Users\\Anca\\Desktop\\Java Curs\\Java15\\PragmaticExercises\\src\\main\\java\\org\\fasttrackit\\DataStructures\\EmployeeList.txt"));
 
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\Anca\\Desktop\\Java Curs\\Java15\\PragmaticExercises\\src\\main\\java\\org\\fasttrackit\\DataStructures\\EmployeeList.txt", true));
+        BufferedWriter bufferedWriter = new BufferedWriter
+                (new FileWriter("C:\\Users\\Anca\\Desktop\\Java Curs\\Java15\\PragmaticExercises\\src\\main\\java\\org\\fasttrackit\\DataStructures\\EmployeeList.txt", true));
 
         List<String> employeeList1 = new ArrayList<>();
 
