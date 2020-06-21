@@ -1,10 +1,6 @@
 package org.fasttrackit.DataStructures;
 
 import org.fasttrackit.utils.ScannerUtils;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class PasswordGenerator {
@@ -64,7 +60,7 @@ public class PasswordGenerator {
 //                password[i] = spChar[randomSpChar];
 //                i++; }
 //
-//            if (i < password.length) {
+//            if (i < password.length ) {
 //                int randomNumber = new Random().nextInt(numbers.length);
 //                password[i] = numbers[randomNumber];
 //            }
@@ -74,21 +70,6 @@ public class PasswordGenerator {
             System.out.print(s);
         }
     }
-
-
-//
-//
-//            int randomLetter = new Random().nextInt(letters.length);
-//            password[randomPassIndex] = letters[randomLetter];
-//            i++;
-
-//            int randomSpChar = new Random().nextInt(spChar.length);
-//            password[randomPassIndex] = spChar[randomSpChar];
-//            int randomNumber = new Random().nextInt(numbers.length);
-//            password[randomPassIndex] = numbers[randomNumber];
-
-//            System.out.print(password[i]);
-//}
 
 }
 
